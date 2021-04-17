@@ -16,6 +16,7 @@ class DetailViewController: NSViewController {
         // Do view setup here.
     }
     
+    // the following was added for project 1
     func imageSelected(name: String) {
         imageView.image = NSImage(named: name)
     }

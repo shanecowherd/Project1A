@@ -4,6 +4,8 @@
 //
 //  Created by Amanda on 3/13/21.
 //
+// Added to see if source control push makes it to github file
+//
 
 import Cocoa
 
@@ -28,9 +30,8 @@ class SourceViewController: NSViewController,
             // if this item starts with "nssl' add it to our array
             if item.hasPrefix("nssl") {
                 pictures.append(item)
-                //print("imag file name = \(item)")
             }
-        }        
+        }
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
