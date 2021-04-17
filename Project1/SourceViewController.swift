@@ -7,6 +7,7 @@
 // Added to see if source control push makes it to github file
 //
 // this line added to test git protocol
+// and a second line to test git protocol
 
 import Cocoa
 
