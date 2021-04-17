@@ -8,6 +8,7 @@
 //
 // this line added to test git protocol
 // and a second line to test git protocol
+// and a third attempt to use git
 
 import Cocoa
 
