@@ -57,20 +57,12 @@ class SourceViewController: NSViewController,
     // done and it compiles and runs
     func tableView(_ tableView: NSTableView, viewFor tableColumn:
                     NSTableColumn?, row: Int) -> NSView? {
-        guard let vw = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as?NSTableCellView else {return nil}
+        guard let vw = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? TableCellViewWithImage else {return nil}
         
         // Here is where the file name is loaded into the text part of the cell view
-        vw.textField?.stringValue = pictures[row]
+        vw.label.stringValue = pictures[row]
         
-        // thought the following line might work BUT NO
-        // compiler says "No exact matches in call to initializer'
-        // vw.imageView?.image = NSImage(pictures[row]) WRONG WRONG WRONG!!!!!
-        
-        // I'm a very old school thinker whose experience is well outside OOP
-        // I ask what function do I call to convert a filename into a loadable image?
-        
-        // ALSO I am still getting use to SWIFT's features
-        // such as optionals and the notion of unwrapping. 
+        vw.image.image = NSImage(named: pictures[row])
         
         return vw
     }
