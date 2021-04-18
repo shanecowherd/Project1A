@@ -159,12 +159,20 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="wsG-Hk-Pwf">
+                                                        <tableCellView misplaced="YES" id="wsG-Hk-Pwf" customClass="TableCellViewWithImage" customModule="Project1" customModuleProvider="target">
                                                             <rect key="frame" x="18" y="0.0" width="141" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
+                                                                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-Ay-heV">
+                                                                    <rect key="frame" x="91" y="0.0" width="50" height="28"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="xf4-Ay-heV" secondAttribute="height" multiplier="16:9" id="SDP-hg-pXG"/>
+                                                                        <constraint firstAttribute="width" constant="50" id="oi8-K9-GxN"/>
+                                                                    </constraints>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="right" imageScaling="proportionallyUpOrDown" id="afZ-UP-mZ6"/>
+                                                                </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="otb-d2-8gc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="24"/>
+                                                                    <rect key="frame" x="8" y="2" width="75" height="24"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="lhF-O2-7ya">
                                                                         <font key="font" metaFont="system" size="20"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -173,11 +181,16 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="otb-d2-8gc" firstAttribute="centerX" secondItem="wsG-Hk-Pwf" secondAttribute="centerX" id="6qs-0u-lmv"/>
                                                                 <constraint firstItem="otb-d2-8gc" firstAttribute="centerY" secondItem="wsG-Hk-Pwf" secondAttribute="centerY" id="9Mi-2L-4nY"/>
-                                                                <constraint firstItem="otb-d2-8gc" firstAttribute="leading" secondItem="wsG-Hk-Pwf" secondAttribute="leading" constant="2" id="ZN6-dg-iXo"/>
+                                                                <constraint firstItem="otb-d2-8gc" firstAttribute="leading" secondItem="wsG-Hk-Pwf" secondAttribute="leading" constant="10" id="Omw-nn-xWr"/>
+                                                                <constraint firstItem="xf4-Ay-heV" firstAttribute="top" secondItem="wsG-Hk-Pwf" secondAttribute="top" id="XY8-IA-cGS"/>
+                                                                <constraint firstAttribute="trailing" secondItem="xf4-Ay-heV" secondAttribute="trailing" id="fXi-Ul-Zow"/>
+                                                                <constraint firstItem="xf4-Ay-heV" firstAttribute="leading" secondItem="otb-d2-8gc" secondAttribute="trailing" constant="10" id="w97-Hm-ZZ8"/>
+                                                                <constraint firstAttribute="bottom" secondItem="xf4-Ay-heV" secondAttribute="bottom" id="ycL-u9-q6K"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="image" destination="xf4-Ay-heV" id="I4X-HP-rb3"/>
+                                                                <outlet property="label" destination="otb-d2-8gc" id="Y5W-XO-nlb"/>
                                                                 <outlet property="textField" destination="otb-d2-8gc" id="hva-XV-kD6"/>
                                                             </connections>
                                                         </tableCellView>
